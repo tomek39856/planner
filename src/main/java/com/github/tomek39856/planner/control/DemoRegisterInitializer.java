@@ -19,9 +19,10 @@ public class DemoRegisterInitializer implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         if (registersAreNotInitialized()) {
-            registerRepository.save(new Register("test", BigDecimal.TEN));
-            registerRepository.save(new Register("test2", BigDecimal.TEN));
-            registerRepository.save(new Register("test3", BigDecimal.TEN));
+            registerRepository.save(new Register("Wallet", BigDecimal.valueOf(1000)));
+            registerRepository.save(new Register("Savings", BigDecimal.valueOf(5000)));
+            registerRepository.save(new Register("Insurance policy", BigDecimal.ZERO));
+            registerRepository.save(new Register("Food Expenses", BigDecimal.ZERO));
         }
     }
 
